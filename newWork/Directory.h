@@ -9,6 +9,8 @@ class Directory
 
 	void loadFromFile();
 	void saveToFile() const;
-	
+public:
+	Directory();
+	void addRecord(const Record&);
 };
 

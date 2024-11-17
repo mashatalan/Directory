@@ -34,3 +34,16 @@ void Directory::saveToFile() const
 	cout << "Could not open the file";
 	exit(EXIT_FAILURE);
 }
+
+Directory::Directory()
+{
+	loadFromFile();
+}
+
+void Directory::addRecord(const Record& record)
+{
+	records.push_back(record);
+	saveToFile();
+}
+
+
