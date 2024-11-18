@@ -1,23 +1,51 @@
 #include <iostream>
 #include "Record.h"
+#include "Directory.h"
 using namespace std;
 
 
 int main()
 {
-    Record firm1("VOG Industries", "John Doe", "123-456-7890", "46 Sunshine Street", "Energy Solutions");
-    firm1.display();
+    Directory directory;
+    int choice;
     
-    const string fileName = "text.txt";
-    ofstream file(fileName);
-    if (file.is_open())
+
+    do
     {
-        firm1.saveToFile(file);
-        cout << "Recoding in file : " << fileName << "\n";
-        file.close();
-    }
-    else
-    {
-        cout << "Error. Failed to open file.";
-    }
+        cout << "1. Added record.\n";
+        cout << "6. Display all records\n";
+        cout << "0. Exit.\n";
+        cout << "Enter your choice : ";
+        cin >> choice;
+        cin.ignore();
+
+        switch (choice)
+        {
+        case 1:
+        {
+            string companeName, owner, phone, address, activity;
+            cout << "Name company : ";
+            getline(cin, companeName);
+            cout << "Owner : ";
+            getline(cin, owner);
+            cout << "Phone : ";
+            getline(cin, phone);
+            cout << "Address : ";
+            getline(cin, address);
+            cout << "Activity : ";
+            getline(cin, activity);
+            directory.addRecord(Record(companeName, owner, phone, address, activity));
+            cout << "Record added.\n";
+            break;
+        }
+        case 6:
+        {
+            directory.displayAll();
+            break;
+        }
+        default:
+            break;
+        }
+
+    } while (choice != 0);
 }
