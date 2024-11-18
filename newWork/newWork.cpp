@@ -9,11 +9,10 @@ int main()
     Directory directory;
     int choice;
     
-
     do
     {
         cout << "\n\n MENU \n\n";
-        cout << "1. Added record.\n";
+        cout << "1. Add a record.\n";
         cout << "2. Search by name\n";
         cout << "3. Search by owner\n";
         cout << "4. Search by phone number\n";
@@ -26,7 +25,7 @@ int main()
 
         switch (choice)
         {
-        case 1:
+            case 1:
         {
             string companeName, owner, phone, address, activity;
             cout << "Name company : ";
@@ -43,7 +42,7 @@ int main()
             cout << "Record added.\n";
             break;
         }
-        case 2:
+            case 2:
         {
             string searchCompanyName;
             cout << "Enter a company name to search : ";
@@ -51,7 +50,7 @@ int main()
             directory.searchByCompanyName(searchCompanyName);
             break;
         }
-        case 3:
+            case 3:
         {
             string owner;
             cout << "Enter a owner name to search : ";
@@ -59,7 +58,7 @@ int main()
             directory.searchByOwner(owner);
             break;
         }
-        case 4:
+            case 4:
         {
             string numberPhone;
             cout << "Enter a numberPhone to search : ";
@@ -67,7 +66,7 @@ int main()
             directory.searchByNumberPhone(numberPhone);
             break;
         }
-        case 5:
+            case 5:
         {
             string activity;
             cout << "Enter a activity to search : ";
@@ -75,13 +74,12 @@ int main()
             directory.searchByActivity(activity);
             break;
         }
-        case 6:
+            case 6:
         {
             directory.displayAll();
             break;
         }
-        default:
-            break;
+       
         }
 
     } while (choice != 0);

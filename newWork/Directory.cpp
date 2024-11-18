@@ -29,7 +29,7 @@ void Directory::saveToFile() const
 	ofstream file(filename);
 	if (file.is_open())
 	{
-		file << "Quantity firm :" << records.size() << "\n";
+		cout << records.size() << "\n";
 		for (const auto& record:records)
 		{
 			record.saveToFile(file);

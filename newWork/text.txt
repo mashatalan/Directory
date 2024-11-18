@@ -1,16 +1,15 @@
-Quantity firm :3
-SkyHigh Adventures
-Daniel Thompson
-+49-89-1234-9876
-42 Alpine Road, Munich, Germany
-Outdoor Sports and Tourism
-Fresh Harvest Organics
-Emma Brown
-+61-3-9876-5432
-7 Oceanview Drive, Melbourne, Australia
-Organic Farming and Distribution
-PixelWare Studios
-Mark Smith
-+44-20-1234-5678
-88 Baker Street, London, UK
+Tech Solutions
+John Doe
+555-1234
+123 Tech St, Silicon Valley
 Software Development
+Green Energy
+Jane Smith
+555-5678
+456 Green Ave, Eco City
+Renewable Energy Solutions
+Market Analytics
+Mark Johnson
+555-9876
+789 Market Rd, Business Park
+Market Research
