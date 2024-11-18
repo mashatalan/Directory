@@ -19,6 +19,7 @@ public:
 	void searchByCompanyName(const string&) const;
 	void searchByOwner(const string&) const;
 	void searchByNumberPhone(const string&) const;
+	void searchByActivity(const string&) const;
 
 };
 

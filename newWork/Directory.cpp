@@ -132,4 +132,21 @@ void Directory::searchByNumberPhone(const string& numberPhone) const
 
 }
 
+void Directory::searchByActivity(const string& activity) const
+{
+	bool f = false;
+	for (const auto& record : records)
+	{
+		if (record.getActivity() == activity)
+		{
+			record.display();
+			f = true;
+		}
+	}
+	if (!f)
+	{
+		cout << "Record with " << activity << " not found \n";
+	}
+}
+
 
