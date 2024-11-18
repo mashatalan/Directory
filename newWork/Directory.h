@@ -17,6 +17,7 @@ public:
 	void addRecord(const Record&);
 	void displayAll() const;
 	void searchByCompanyName(const string&) const;
+	void searchByOwner(const string&) const;
 
 };
 

@@ -96,4 +96,22 @@ void Directory::searchByCompanyName(const string& companyName) const
 	}
 }
 
+void Directory::searchByOwner(const string& owner) const
+{
+	bool f = false;
+	for (const auto& record:records)
+	{
+		if (record.getOwner() == owner)
+		{
+			record.display();
+			f = true;
+		}
+	}
+	if (!f)
+	{
+		cout << "Record with " << owner << " not found \n";
+	}
+
+}
+
 
