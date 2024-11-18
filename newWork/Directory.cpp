@@ -7,16 +7,20 @@ void Directory::loadFromFile()
 	{
 		records.clear();
 		Record record;
+		int count = 0;
 		while (record.loadFromFile(file))
 		{
 			records.push_back(record);
+			count++;
 		}
+		recordCount = count;
 		file.close();
+		cout << "Records loaded: " << count << "\n";
 	}
 	else
 	{
-		cout << "Could not open the file";
-		exit(EXIT_FAILURE);
+		cout << "Warning: Could not open the file \"" << filename << "\". A new file will be created.\n";
+		
 	}
 }
 
@@ -25,14 +29,20 @@ void Directory::saveToFile() const
 	ofstream file(filename);
 	if (file.is_open())
 	{
-		for (int i = 0; i < records.size(); i++)
+		file << "Quantity firm :" << records.size() << "\n";
+		for (const auto& record:records)
 		{
-			records[i].saveToFile(file);
+			record.saveToFile(file);
 		}
 		file.close();
+		
 	}
-	cout << "Could not open the file";
-	exit(EXIT_FAILURE);
+	else
+	{
+		cout << "Could not open the file";
+		exit(EXIT_FAILURE);
+	}
+	
 }
 
 Directory::Directory()
@@ -40,10 +50,33 @@ Directory::Directory()
 	loadFromFile();
 }
 
+int Directory::getRecordCount() const
+{
+	return this->recordCount;
+}
+
+
+
 void Directory::addRecord(const Record& record)
 {
 	records.push_back(record);
+	recordCount++;
 	saveToFile();
+}
+
+void Directory::displayAll() const
+{
+	if (!records.empty())
+	{
+		for (const auto& record:records)
+		{
+			record.display();
+		}
+	}
+	else
+	{
+		cout << "Directory is empty.\n";
+	}
 }
 
 
