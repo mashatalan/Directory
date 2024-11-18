@@ -16,6 +16,7 @@ int main()
         cout << "1. Added record.\n";
         cout << "2. Search by name\n";
         cout << "3. Search by owner\n";
+        cout << "4. Search by phone number\n";
         cout << "6. Display all records\n";
         cout << "0. Exit.\n";
         cout << "Enter your choice : ";
@@ -55,6 +56,14 @@ int main()
             cout << "Enter a owner name to search : ";
             getline(cin, owner);
             directory.searchByOwner(owner);
+            break;
+        }
+        case 4:
+        {
+            string numberPhone;
+            cout << "Enter a numberPhone to search : ";
+            getline(cin, numberPhone);
+            directory.searchByNumberPhone(numberPhone);
             break;
         }
         case 6:

@@ -114,4 +114,22 @@ void Directory::searchByOwner(const string& owner) const
 
 }
 
+void Directory::searchByNumberPhone(const string& numberPhone) const
+{
+	bool f = false;
+	for (const auto& record : records)
+	{
+		if (record.getPhone() == numberPhone)
+		{
+			record.display();
+			f = true;
+		}
+	}
+	if (!f)
+	{
+		cout << "Record with " << numberPhone << " not found \n";
+	}
+
+}
+
 
