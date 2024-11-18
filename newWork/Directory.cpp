@@ -79,4 +79,21 @@ void Directory::displayAll() const
 	}
 }
 
+void Directory::searchByCompanyName(const string& companyName) const
+{
+	bool f = false;
+	for (const auto& record:records)
+	{
+		if (record.getCompanyName() == companyName)
+		{
+			record.display();
+			f = true;
+		}
+	}
+	if (!f)
+	{
+		cout << "Record with name  " << companyName << " not found \n";
+	}
+}
+
 

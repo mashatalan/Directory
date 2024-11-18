@@ -12,7 +12,9 @@ int main()
 
     do
     {
+        cout << "\n\n MENU \n\n";
         cout << "1. Added record.\n";
+        cout << "2. Search by name\n";
         cout << "6. Display all records\n";
         cout << "0. Exit.\n";
         cout << "Enter your choice : ";
@@ -36,6 +38,14 @@ int main()
             getline(cin, activity);
             directory.addRecord(Record(companeName, owner, phone, address, activity));
             cout << "Record added.\n";
+            break;
+        }
+        case 2:
+        {
+            string searchCompanyName;
+            cout << "Enter a company name to search : ";
+            getline(cin, searchCompanyName);
+            directory.searchByCompanyName(searchCompanyName);
             break;
         }
         case 6:

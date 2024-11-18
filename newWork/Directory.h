@@ -16,6 +16,7 @@ public:
 	int getRecordCount() const;
 	void addRecord(const Record&);
 	void displayAll() const;
+	void searchByCompanyName(const string&) const;
 
 };
 

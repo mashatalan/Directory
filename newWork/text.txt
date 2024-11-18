@@ -1,31 +1,16 @@
-Quantity firm :6
-Quantity firm :5
-Quantity firm :4
-2
-jhgjh
-kgk
-vhvj
-hjvj
-nmbm
-jfgj
-'ghjgj'gh
-bhjj\
-789
-jjdkb
-cf
-a
-s
-3
-Vog
-hdjsgf
-ksdjh
-dkjhfs
-Name
-Owner
-9i8988
-jkahc
-
-hbjhfds
-adm
-sldnf
-ndfkcj
+Quantity firm :3
+SkyHigh Adventures
+Daniel Thompson
++49-89-1234-9876
+42 Alpine Road, Munich, Germany
+Outdoor Sports and Tourism
+Fresh Harvest Organics
+Emma Brown
++61-3-9876-5432
+7 Oceanview Drive, Melbourne, Australia
+Organic Farming and Distribution
+PixelWare Studios
+Mark Smith
++44-20-1234-5678
+88 Baker Street, London, UK
+Software Development
