@@ -7,15 +7,11 @@ void Directory::loadFromFile()
 	{
 		records.clear();
 		Record record;
-		int count = 0;
 		while (record.loadFromFile(file))
 		{
 			records.push_back(record);
-			count++;
 		}
-		recordCount = count;
 		file.close();
-		cout << "Records loaded: " << count << "\n";
 	}
 	else
 	{
@@ -50,17 +46,9 @@ Directory::Directory()
 	loadFromFile();
 }
 
-int Directory::getRecordCount() const
-{
-	return this->recordCount;
-}
-
-
-
 void Directory::addRecord(const Record& record)
 {
 	records.push_back(record);
-	recordCount++;
 	saveToFile();
 }
 
